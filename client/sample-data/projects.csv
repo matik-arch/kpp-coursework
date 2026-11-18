@@ -1,0 +1,4 @@
+student_id;code;title;technology;total_requirements;total_checks
+1;PRJ-03;Модуль статичного аналізу коду;Java 21 / Maven;16;20
+2;PRJ-04;Веб-каталог курсових проєктів;Java 21 / MySQL;12;15
+1;PRJ-05;Сервіс автоматизованого тестування;Java 21 / JUnit 5;20;30
