@@ -10,6 +10,14 @@ public class DBUtil {
     private static final String DEFAULT_USER = "root";
     private static final String DEFAULT_PASSWORD = "";
 
+    static {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            throw new IllegalStateException("Не знайдено драйвер MySQL JDBC", e);
+        }
+    }
+
     public static Connection getConnection() throws SQLException {
         String url = envOrDefault("DB_URL", DEFAULT_URL);
         String user = envOrDefault("DB_USER", DEFAULT_USER);
